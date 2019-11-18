@@ -1,0 +1,74 @@
+.wrapper{
+	background-image: url("../images/background/3.jpg");
+	background-size: 100%;
+	width: 100%;
+	height: 150%;
+	min-width: 950px;
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+}
+
+.login_box{
+	font-family: 'Quicksand-LightItalic', sans-serif;
+	position : relative;
+	margin-right: auto;
+	margin-left: auto;
+	top: 7%;
+	width: 43%;
+	background-color: #ffffff;
+	border: 1px solid #EDEDED;
+	border-radius: 9px;
+	padding: 5px;
+	opacity: 0.5;
+}
+
+input[type="submit"] {
+	background-color:#095a9c;
+	border: 1px solid #095a9c;
+	border-radius: 9px;
+	margin: 5px 0 5px ;
+	color: #ffffff;
+	padding: 5px 10px 5px 10px;
+	text-shadow: #0c0c0c 1.5px 1.5px 1px;
+	font-size: 100%;
+   
+}
+
+input[type="text"], input[type="email"],input[type="password"] {
+	border: 1px solid #e5e5e5;
+	margin-top: 5px;
+	width: 70%;
+	height: 35px;
+	margin-bottom: 10px;
+	padding-left: 5px;
+}
+
+
+.login_header {
+	font-family: 'Quicksand-LightItalic', sans-serif;
+	width: 100%;
+	height: 84px;
+	background-color: #095a9c;  /* #0e6f96*/
+	color: #fff;
+	text-align: center;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	border-bottom-right-radius: 7px;
+	border-bottom-left-radius: 7px;
+	
+
+
+
+}
+.footer{
+	vertical-align:bottom ;
+}
+
+.ad{
+	background-image: url("../images/background/2.jpg");
+	background-size: 100%;
+	width: 100%;
+	height: 150%;
+	min-width: 950px;
+	background-attachment: fixed;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="login.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body class='bdy '>
+    <div class="bg"></div>
+    <form onsubmit="return check()">
+            
+        <div class="form-group">
+          <label for="email"><p>Email address:</p></label>
+          <input type="email" class="form-control" placeholder='xyz@gmail.com' id="email">
+        </div>
+        <span style="color:red" id="message1"></span>
+        <div class="form-group">
+          <label for="pwd"><p>Password:</p></label>
+          <input type="password" class="form-control" placeholder='password' id="pwd">
+        </div>
+        <span style="color:red" id="message2"></span>
+        <div>
+        <a href="#" class="para">forgot password?</a>
+      </div>
+        <div class="checkbox">
+          <label><input type="checkbox"><p> Remember me</p></label>
+        </div>
+        <button type="submit" class="btn btn-default">Login</button>
+      </form>
+      <script>
+      function check()
+      {
+        
+        var a=document.getElementById('email').value;
+        var b=document.getElementById('pwd').value;
+        if(a=="")
+        {
+          document.getElementById('message1').innerHTML='please fill email';
+          return false;
+        }
+        if(b=="")
+        {
+          document.getElementById('message2').innerHTML='please fill password';
+          return false;
+        }
+
+      }
+
+        </script>
+        <?php
+        include 
+        ?>
+            <!-- <footer class="footer">
+                copyrights &copy; @LEHKO GYM 2019.
+            </footer> -->
+      
+</body>
+</html>

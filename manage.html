@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Register</title>
+</head>
+<body>
+    <div class=wrapper>
+
+        <div class="login_box">
+            <div class="login_header">
+                <h1>Details</h1>
+            </div>
+            <table> 
+                <td>
+                        <form action="manage.php" method="POST">
+                        <label>Name </p></label>
+                        <input type="text" placeholder="name" name="name" value="">
+                        <br>
+                        <label>Id </p></label>
+                        <br>
+                        <input type="text" placeholder="ID" name="id" value="">
+                        <p>Cost</p>
+                        <input type="text" placeholder="cost" name="cost" value="">
+                        <p>Duration</p>
+                        <input type="text" name="dur" value="">
+                        <p>Upload picture</p>
+                        <input type="file" name="img" value="">
+                        <input type="submit" name="submit" value="Submit">
+
+                        <input type="submit" name="update" value="update">
+                        <input type="submit" name="delete" value="delete">
+                        
+
+                        </form>
+        
+                </td>
+                
+            </table>
+        </div> 
+        <div class="footer">
+            <footer>
+                <p>Copyrights &copy @Gym</p>
+            </footer>
+        </div> 
+    </div> 
+    <!-- <script>
+            function check()
+            {
+              
+              var a=document.getElementById('email').value;
+              var b=document.getElementById('pword').value;
+              if(a=="")
+              {
+                document.getElementById('message1').innerHTML='please fill email';
+                return false;
+              }
+              if(b=="")
+              {
+                document.getElementById('message2').innerHTML='please fill password';
+                return false;
+              }
+      
+            }
+            function check()
+            {
+              
+              var b=document.getElementById('pword').value;
+              var d=document.getElementById('pword2').value;
+              if(b!=d)
+              {
+                document.getElementById('message3').innerHTML='The password doesnt match!';
+                return false;
+              }
+      
+            }
+      
+              </script> -->
+</body>
+</html>

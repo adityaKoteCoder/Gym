@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Register</title>
+</head>
+<body>
+    <div class=wrapper>
+
+        <div class="login_box">
+            <div class="login_header">
+                <h1>Registration</h1>
+            </div>
+            <table> 
+                <td>
+                        <form action="register.php" method="POST">
+                        <label>Name </p></label>
+                        <input type="text" placeholder="name" name="name">
+                        <p>User Name</p>
+                        <input type="text" placeholder=" Username" name="uname">
+                        <p>Date of birth</p>
+                        <input type="date" name="dob">
+                        <p>Gender</p>
+                        <input type="radio" name="gen" value="Male" checked>Male<br>
+                        <input type="radio" name="gen" value="Female">Female<br>
+                        <input type="radio" name="gen" value="Other">Other
+                        <p>Phone no</p>
+                        <input type="text" placeholder="91+" name="pno">
+                        <p>Email</p>
+                        <input type="email" placeholder="@example.com" name="email" >
+                        <p>Password</p>
+                        <input type="password" placeholder="password" name="pword">
+                        <p>Re-type Password</p>
+                        <input type="password" placeholder="password" name="pword2">
+                        <input type="submit" name="Register" value="Submit">
+                        </form>
+        
+                </td>
+                
+            </table>
+        </div> 
+        <div class="footer">
+            <footer>
+                <p>Copyrights &copy @Gym</p>
+            </footer>
+        </div> 
+    </div> 
+    <script>
+            function check()
+            {
+              
+              var a=document.getElementById('email').value;
+              var b=document.getElementById('pword').value;
+              if(a=="")
+              {
+                document.getElementById('message1').innerHTML='please fill email';
+                return false;
+              }
+              if(b=="")
+              {
+                document.getElementById('message2').innerHTML='please fill password';
+                return false;
+              }
+      
+            }
+            function check()
+            {
+              
+              var b=document.getElementById('pword').value;
+              var d=document.getElementById('pword2').value;
+              if(b!=d)
+              {
+                document.getElementById('message3').innerHTML='The password doesnt match!';
+                return false;
+              }
+      
+            }
+      
+              </script>
+</body>
+</html>
