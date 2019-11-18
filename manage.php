@@ -18,12 +18,12 @@ $result=mysqli_query($conn,$sql)or die(mysqli_error($connection));
 
 
     $name=$_POST['name'];
-    $id=$_POST['id'];
-    $cost=$_POST['cost'];
+    //$id=$_POST['id'];
+    $price=$_POST['price'];
     $dur=$_POST['dur'];
     $img=$_POST['img'];
 
-    $query="INSERT INTO user_details VALUES ('$name','$id','$cost','$dur','$img')";
+    $query="INSERT INTO offer (name, price, dur, img) VALUES ('$name','$price','$dur','$img')";
 
 $result=mysqli_query($conn,$sql)or die(mysqli_error($connection));
 // INSERTION
@@ -34,7 +34,7 @@ mysqli_query($conn,$query)or die(mysqli_error($conn));
 
 // UPDATE
 $sql = "UPDATE offer SET name='$name',id='$id',cost='$cost' ,dur='$dur',img='$img' WHERE id=$id";
-mysqli_select_db($conn,$db);
+mysqli_select_db($conn,$db_name);
 $retval1 = mysqli_query($conn, $sql );
 
 if($retval1) {
@@ -63,7 +63,7 @@ if($retval2) {
 Mysqli_close($conn);
 ?> -->
 
-<?php
+<!-- <?php
 include 'dbConfig.php';
 $statusMsg = '';
 
@@ -98,4 +98,4 @@ if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
 
 // Display status message
 echo $statusMsg;
-?>
+?> -->

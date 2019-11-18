@@ -26,7 +26,7 @@ $retval = mysqli_query($conn, $sql );
 
 // UPDATE
 $sql = "UPDATE offer SET name='$name',id='$id',cost='$cost' ,dur='$dur',img='$img' WHERE id=$id";
-mysqli_select_db($conn,$db);
+mysqli_select_db($conn,$dbname);
 $retval1 = mysqli_query($conn, $sql );
 
 if($retval1) {
@@ -59,6 +59,7 @@ if($retval2) {
     <title>Admin</title>
 </head>
 <link rel="stylesheet" href="css/style.css">
+
 <body class="ad">
     <div>
         <div class="login_box">
@@ -76,8 +77,9 @@ if($retval2) {
                     <td><?php echo "$email" ?></td>
                     <td><?php echo "$pword" ?></td>
                 </tr>
-                <tr> <input type="submit" name="update" value="update">
-                     <input type="submit" name="delete" value="delete">
+                <tr>
+                     <button type="submit" class="btn" name="update">UPDATE</button>
+                     <button type="submit" class="btn" name="delete">DELETE</button>
                 </tr>
             </table>
             </center>

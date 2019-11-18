@@ -10,7 +10,6 @@ $conn = mysqli_connect("$servername","$username","$password","$dbname");
 
 // $result = $conn->query($sql);
 
-
 $sql = "SELECT * FROM offer";
 $result = $conn->query($sql);
 // mysqli_select_db($conn,$dbname);
@@ -41,9 +40,9 @@ $result = $conn->query($sql);
             ?>
             <tr>
                     <td><?php echo $row["name"] ?></td>
-                    <td><?php echo $row["cost"] ?></td>
+                    <td><?php echo $row["price"] ?></td>
                     <td><?php echo $row["dur"] ?></td>
-                    <td><?php echo $row["img"] ?></td>
+                    <td><?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';?></td>
             </tr> 
             <?php 
                 }

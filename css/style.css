@@ -72,3 +72,15 @@ input[type="text"], input[type="email"],input[type="password"] {
 	min-width: 950px;
 	background-attachment: fixed;
 }
+
+.btn {
+	background-color:#095a9c;
+	border: 1px solid #095a9c;
+	border-radius: 9px;
+	margin: 5px 0 5px ;
+	color: #ffffff;
+	padding: 5px 10px 5px 10px;
+	text-shadow: #0c0c0c 1.5px 1.5px 1px;
+	font-size: 100%;
+   
+}
