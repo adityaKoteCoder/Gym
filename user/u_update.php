@@ -15,9 +15,11 @@ if(isset($_POST["uname"]) && !empty($_POST["uname"])){
     $input_name = trim($_POST["name"]);
     if(empty($input_name)){
         $name_err = "Please enter a name.";
-    } elseif(!filter_var($input_name, FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z\s]+$/")))){
-        $name_err = "Please enter a valid name.";
-    } else{
+    } 
+    // elseif(!filter_var($input_name, FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z\s]+$/")))){
+    //     $name_err = "Please enter a valid name.";
+    // }
+     else{
         $name = $input_name;
     }
     
@@ -25,7 +27,8 @@ if(isset($_POST["uname"]) && !empty($_POST["uname"])){
     $input_dob = trim($_POST["dob"]);
     if(empty($input_dob)){
         $dob_err = "Please enter an date of birth.";     
-    } else{
+    } 
+    else{
         $dob = $input_dob;
     }
     
@@ -56,7 +59,7 @@ if(isset($_POST["uname"]) && !empty($_POST["uname"])){
      }
 
      // Validate password
-     $input_pass = trim($_POST["pass"]);
+     $input_pword = trim($_POST["pword"]);
      if(empty($input_pword)){
          $pword_err = "Please enter the phone number.";     
      } else{
@@ -70,7 +73,7 @@ if(isset($_POST["uname"]) && !empty($_POST["uname"])){
          
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "sssi", $param_name, $param_dob, $param_gen, $param_pno, $param_email, $param_pword, $param_email);
+            mysqli_stmt_bind_param($stmt, "ssissss", $param_name,$param_uname,  $param_dob, $param_gen, $param_pno, $param_email, $param_pword);
             
             // Set parameters
             $param_name = $name;
@@ -184,7 +187,7 @@ if(isset($_POST["uname"]) && !empty($_POST["uname"])){
                         </div>
                         <div class="form-group <?php echo (!empty($dob_err)) ? 'has-error' : ''; ?>">
                             <label>Date of Birth</label>
-                            <input type="date" name="name" class="form-control" value="<?php echo $date; ?>">
+                            <input type="date" name="dob" class="form-control" value="<?php echo $dob; ?>">
                             <span class="help-block"><?php echo $dob_err;?></span>
                         </div>
                         <div class="form-group <?php echo (!empty($gen_err)) ? 'has-error' : ''; ?>">
@@ -202,12 +205,12 @@ if(isset($_POST["uname"]) && !empty($_POST["uname"])){
                             <input type="text" name="email" class="form-control" value="<?php echo $email; ?>">
                             <span class="help-block"><?php echo $email_err;?></span>
                         </div>
-                        <div class="form-group <?php echo (!empty($pass_err)) ? 'has-error' : ''; ?>">
+                        <div class="form-group <?php echo (!empty($pword_err)) ? 'has-error' : ''; ?>">
                             <label>Password</label>
-                            <input type="file" name="pass" class="form-control" value="<?php echo $pass; ?>">
-                            <span class="help-block"><?php echo $pass_err;?></span>
+                            <input type="text" name="pword" class="form-control" value="<?php echo $pword; ?>">
+                            <span class="help-block"><?php echo $pword_err;?></span>
                         </div>
-                        <input type="hidden" name="id" value="<?php echo $id; ?>"/>
+                        <input type="hidden" name="uname" value="<?php echo $uname; ?>"/>
                         <input type="submit" class="btn btn-primary" value="Submit">
                         <a href="u_index.php" class="btn btn-default">Cancel</a>
                     </form>

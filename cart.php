@@ -81,7 +81,7 @@ if(isset($_POST["add_to_cart"]))
                 <h3>Order Details</h3>  
                 <?php 
                 $query = "SELECT * FROM offer ORDER BY id ASC"; //ORDER IN ASSCENDING ORDER
-                $result = mysqli_query($connect,$query);
+                $result = mysqli_query($conn,$query);
                 if(mysqli_num_rows($result) > 0)
                 {
                      while($row = mysqli_fetch_array($result))
@@ -90,14 +90,16 @@ if(isset($_POST["add_to_cart"]))
                           <div class="col-md-4">
                                <form method="post" action="cart.php?action=add&id=<?php echo $row["id"]; ?>">
                                <div style="border:1px solid #333; background-color:#f1f1f1; border-radius:5px; padding:16px;" align="center">
-                               <img src="<?php echo $row["img"];?>"/>
+                               <?php 
+                        $img_name = "images/background/" . $row["img"] ?>
+                    <td><img src="<?php echo $img_name ?>" width="100" /></td>
                                <h4 class="text-info"><?php echo $row["name"]; ?></h4>
                                <h4 class="text-info"><?php echo $row["price"]; ?></h4>
                                <h4 class="text-info"><?php echo $row["dur"]; ?></h4>
                                <input type="text" name="quantity" class="form-control" value="1" />  
                                <input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>" />  
                                <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>" />  
-                               <input type="hidden" name="hidden_price" value="<?php echo $row["dur"]; ?>" />  
+                                                                                                                                       
                                <input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-success" value="Add to Cart" />  
                           </div>  
                      </form>

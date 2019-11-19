@@ -15,14 +15,15 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
     $input_name = trim($_POST["name"]);
     if(empty($input_name)){
         $name_err = "Please enter a name.";
-    } elseif(!filter_var($input_name, FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z\s]+$/")))){
-        $name_err = "Please enter a valid name.";
-    } else{
+    } 
+    // elseif(!filter_var($input_name, FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z\s]+$/")))){
+    //     $name_err = "Please enter a valid name.";}
+     else{
         $name = $input_name;
     }
     
     // Validate address address
-    $input_address = trim($_POST["price"]);
+    $input_price = trim($_POST["price"]);
     if(empty($input_price)){
         $price_err = "Please enter an price.";     
     } else{
@@ -33,9 +34,11 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
     $input_dur = trim($_POST["dur"]);
     if(empty($input_dur)){
         $dur_err = "Please enter the duration.";     
-    } elseif(!ctype_digit($input_dur)){
-        $dur_err = "Please enter a positive integer value.";
-    } else{
+    } 
+    // elseif(!ctype_digit($input_dur)){
+    //     $dur_err = "Please enter a positive integer value.";
+    // } 
+    else{
         $dur = $input_dur;
     }
     
@@ -54,7 +57,7 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
          
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "sssi", $param_name, $param_price, $param_dur, $param_img, $param_id);
+            mysqli_stmt_bind_param($stmt, "sssss", $param_name, $param_price, $param_dur, $param_img, $param_id);
             
             // Set parameters
             $param_name = $name;
@@ -79,7 +82,7 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
     
     // Close connection
     mysqli_close($link);
-} else{
+}else{
     // Check existence of id parameter before processing further
     if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
         // Get URL parameter
@@ -111,7 +114,7 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
 
                 } else{
                     // URL doesn't contain valid id. Redirect to error page
-                    header("location: o_error.php");
+                    header("location: error.php");
                     exit();
                 }
                 
@@ -127,7 +130,7 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
         mysqli_close($link);
     }  else{
         // URL doesn't contain id parameter. Redirect to error page
-        header("location: o_error.php");
+        header("location: error.php");
         exit();
     }
 }
@@ -178,7 +181,7 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
                         </div>
                         <input type="hidden" name="id" value="<?php echo $id; ?>"/>
                         <input type="submit" class="btn btn-primary" value="Submit">
-                        <a href="o_index.php" class="btn btn-default">Cancel</a>
+                        <a href="index.php" class="btn btn-default">Cancel</a>
                     </form>
                 </div>
             </div>        

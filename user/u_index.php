@@ -64,9 +64,9 @@
                                         echo "<td>" . $row['email'] . "</td>";
                                         echo "<td>" . $row['pword'] . "</td>";
                                         echo "<td>";
-                                            echo "<a href='u_read.php?id=". $row['uname'] ."' title='View Record' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>";
-                                            echo "<a href='u_update.php?id=". $row['uname'] ."' title='Update Record' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>";
-                                            echo "<a href='u_delete.php?id=". $row['uname'] ."' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
+                                            echo "<a href='u_read.php?uname=". $row['uname'] ."' title='View Record' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>";
+                                            echo "<a href='u_update.php?uname=". $row['uname'] ."' title='Update Record' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>";
+                                            echo "<a href='u_delete.php?uname=". $row['uname'] ."' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
                                         echo "</td>";
                                     echo "</tr>";
                                 }

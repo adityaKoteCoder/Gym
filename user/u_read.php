@@ -9,10 +9,10 @@ if(isset($_GET["uname"]) && !empty(trim($_GET["uname"]))){
     
     if($stmt = mysqli_prepare($link, $sql)){
         // Bind variables to the prepared statement as parameters
-        mysqli_stmt_bind_param($stmt, "i", $param_id);
+        mysqli_stmt_bind_param($stmt, "i", $param_uname);
         
         // Set parameters
-        $param_id = trim($_GET["uname"]);
+        $param_uname = trim($_GET["uname"]);
         
         // Attempt to execute the prepared statement
         if(mysqli_stmt_execute($stmt)){
@@ -80,27 +80,27 @@ if(isset($_GET["uname"]) && !empty(trim($_GET["uname"]))){
                     </div>
                     <div class="form-group">
                         <label>Price</label>
-                        <p class="form-control-static"><?php echo $row['uname']; ?> ?></p>
+                        <p class="form-control-static"><?php echo $row['uname']; ?></p>
                     </div>
                     <div class="form-group">
                         <label>Price</label>
-                        <p class="form-control-static"><?php echo $row['dob']; ?> ?></p>
+                        <p class="form-control-static"><?php echo $row['dob']; ?></p>
                     </div>
                     <div class="form-group">
                         <label>Price</label>
-                        <p class="form-control-static"><?php echo $row['gen']; ?> ?></p>
+                        <p class="form-control-static"><?php echo $row['gen']; ?></p>
                     </div>
                     <div class="form-group">
                         <label>Price</label>
-                        <p class="form-control-static"><?php echo $row['pno']; ?> ?></p>
+                        <p class="form-control-static"><?php echo $row['pno']; ?></p>
                     </div>
                     <div class="form-group">
                         <label>Duration</label>
                         <p class="form-control-static"><?php echo $row["email"]; ?></p>
                     </div>
                     <div class="form-group">
-                        <label>Image</label>
-                        <p class="form-control-static"><?php echo $row["pass"]; ?></p>
+                        <label>Password</label>
+                        <p class="form-control-static"><?php echo $row["pword"]; ?></p>
                     </div>
 
                     <p><a href="u_index.php" class="btn btn-primary">Back</a></p>

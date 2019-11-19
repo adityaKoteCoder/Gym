@@ -42,7 +42,9 @@ $result = $conn->query($sql);
                     <td><?php echo $row["name"] ?></td>
                     <td><?php echo $row["price"] ?></td>
                     <td><?php echo $row["dur"] ?></td>
-                    <td><?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';?></td>
+                    <?php 
+                        $img_name = "images/background/" . $row["img"] ?>
+                    <td><img src="<?php echo $img_name ?>" width="100" /></td>
             </tr> 
             <?php 
                 }
