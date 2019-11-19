@@ -23,32 +23,6 @@ $sql = "SELECT * FROM user_details where  uname= '$uname'";
 mysqli_select_db($conn,$dbname);
 $retval = mysqli_query($conn, $sql );
 // $row = mysqli_fetch_array($retval);
-
-// UPDATE
-$sql = "UPDATE offer SET name='$name',id='$id',cost='$cost' ,dur='$dur',img='$img' WHERE id=$id";
-mysqli_select_db($conn,$dbname);
-$retval1 = mysqli_query($conn, $sql );
-
-if($retval1) {
-    header("location:membership.php");
- }else {
-    echo "<script> alert:Update failed!</script>";
- }
-mysqli_close($conn);
-
-// DELETION
-$id = $_GET['id'];
-
-   
-    $sql = "DELETE FROM offer where id = '$id'";
-   mysqli_select_db($conn,$dbname);
-   $retval2 = mysqli_query($conn, $sql );
-   
-if($retval2) {
-        echo "<script> alert:Deletion Successful!</script>";
-      }else {
-        echo "<script> alert:Deletion failed!</script>";
-      }
 ?>
 <!DOCTYPE html>
 <html lang="en">

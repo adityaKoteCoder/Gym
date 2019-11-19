@@ -33,7 +33,7 @@ $_SESSION["pword"]=$_GET['pword'];
         </form>
             <center>
                     <div class="button1">
-                        <a href="membership.php" class="btn">Personal DETAILS</a>
+                        <a href="user/u_index.php" class="btn">Personal DETAILS</a>
                         <a href="show_offer.php" class="btn">Offers</a>
                     </div>
             </center>
