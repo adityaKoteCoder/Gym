@@ -73,12 +73,12 @@ if(isset($_POST["uname"]) && !empty($_POST["uname"])){
          
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "ssissss", $param_name,$param_uname,  $param_dob, $param_gen, $param_pno, $param_email, $param_pword);
+            mysqli_stmt_bind_param($stmt, "ssssss", $param_name,$param_uname, $param_gen, $param_pno, $param_email, $param_pword);
             
             // Set parameters
             $param_name = $name;
             $param_uname = $uname;
-            $param_dob = $dob;
+            // $param_dob = $dob;
             $param_gen = $gen;
             $param_pno = $pno;
             $param_email = $email;
@@ -162,6 +162,7 @@ if(isset($_POST["uname"]) && !empty($_POST["uname"])){
 <head>
     <meta charset="UTF-8">
     <title>Update Record</title>
+    <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
     <style type="text/css">
         .wrapper{
@@ -170,7 +171,7 @@ if(isset($_POST["uname"]) && !empty($_POST["uname"])){
         }
     </style>
 </head>
-<body>
+<body class="ad">
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
@@ -185,11 +186,11 @@ if(isset($_POST["uname"]) && !empty($_POST["uname"])){
                             <input type="text" name="name" class="form-control" value="<?php echo $name; ?>">
                             <span class="help-block"><?php echo $name_err;?></span>
                         </div>
-                        <div class="form-group <?php echo (!empty($dob_err)) ? 'has-error' : ''; ?>">
+                        <!-- <div class="form-group <?php echo (!empty($dob_err)) ? 'has-error' : ''; ?>">
                             <label>Date of Birth</label>
                             <input type="date" name="dob" class="form-control" value="<?php echo $dob; ?>">
                             <span class="help-block"><?php echo $dob_err;?></span>
-                        </div>
+                        </div> -->
                         <div class="form-group <?php echo (!empty($gen_err)) ? 'has-error' : ''; ?>">
                             <label>Gender</label>
                             <input type="text" name="gen" class="form-control" value="<?php echo $gen; ?>">

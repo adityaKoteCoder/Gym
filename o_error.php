@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Error</title>
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
     <style type="text/css">
         .wrapper{
@@ -11,7 +12,7 @@
         }
     </style>
 </head>
-<body>
+<body class="ad">
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
