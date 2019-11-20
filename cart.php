@@ -69,11 +69,12 @@ if(isset($_POST["add_to_cart"]))
  <html>  
       <head>  
            <title>Webslesson Tutorial | Simple PHP Mysql Shopping Cart</title>  
+           <link rel="stylesheet" href="css/main.css">
            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
       </head>  
-      <body>  
+      <body class="ad">  
            <br />  
            <div class="container" style="width:700px;">  
            <div style="clear:both"></div>  
