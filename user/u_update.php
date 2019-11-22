@@ -104,7 +104,7 @@ if(isset($_POST["uname"]) && !empty($_POST["uname"])){
     // Check existence of id parameter before processing further
     if(isset($_GET["uname"]) && !empty(trim($_GET["uname"]))){
         // Get URL parameter
-        $id =  trim($_GET["uname"]);
+        $uname =  trim($_GET["uname"]);
         
         // Prepare a select statement
         $sql = "SELECT * FROM user_details WHERE uname = ?";

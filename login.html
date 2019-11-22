@@ -20,12 +20,12 @@
         </div>
         <span style="color:red" id="message1"></span>
         <div class="form-group">
-          <label for="pwd"><p>Password:</p></label>
-          <input type="password" class="form-control" placeholder='password' id="pwd">
+          <label for="pword"><p>Password:</p></label>
+          <input type="password" class="form-control" placeholder='password' id="pword">
         </div>
         <span style="color:red" id="message2"></span>
         <div>
-        <a href="#" class="para">forgot password?</a>
+        <!-- <a href="#" class="para">forgot password?</a> -->
       </div>
         <div class="checkbox">
           <label><input type="checkbox"><p> Remember me</p></label>
@@ -37,7 +37,7 @@
       {
         
         var a=document.getElementById('email').value;
-        var b=document.getElementById('pwd').value;
+        var b=document.getElementById('pword').value;
         if(a=="")
         {
           document.getElementById('message1').innerHTML='please fill email';

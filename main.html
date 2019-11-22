@@ -40,13 +40,37 @@
 				<div class="loginmodal-container">
 					<h1>Login to Your Account</h1><br>
 				  <form action="login.php" method="GET">
-					<input type="text" name="email" placeholder="@example.com">
-					<input type="password" name="pword" placeholder="Password">
+          <input type="email" name="email" placeholder="@example.com" id="email">
+          <span style="color:red" id="message1"></span>
+          <input type="password" name="pword" placeholder="Password" id="pword">
+          <span style="color:red" id="message2"></span>
 					<input type="submit" name="login" class="login loginmodal-submit" value="Login">
-				  </form>
+          </form>
+          <script>
+            function check()
+            {
+              
+              var a=document.getElementById('email').value;
+              var b=document.getElementById('pword').value;
+              if(a=="")
+              {
+                document.getElementById('message1').innerHTML='please fill email';
+                return false;
+              }
+              if(b=="")
+              {
+                document.getElementById('message2').innerHTML='please fill password';
+                return false;
+              }
+      
+            }
+      
+              </script>
 					
 				  <div class="login-help">
-					<a href="register.html">Register</a> - <a href="#">Forgot Password</a>
+          <a href="register.html">Register</a> 
+          
+          <!-- - <a href="#">Forgot Password</a> -->
 				  </div>
 				</div>
 			</div>
