@@ -36,7 +36,6 @@
                     <?php
                     // Include config file
                     require_once "uconfig.php";
-                    
                     // Attempt select query execution
                     $sql = "SELECT * FROM user_details";
                     if($result = mysqli_query($link, $sql)){

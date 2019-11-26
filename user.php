@@ -11,7 +11,7 @@ $_SESSION["gen"]=$_GET['gen'];
 $_SESSION["pno"]=$_GET['pno'];
 $_SESSION['email']=$_GET['email'];
 $_SESSION["pword"]=$_GET['pword'];
-
+$uname= $_SESSION['uname'];
 
 ?>
 <!DOCTYPE html>
@@ -27,17 +27,17 @@ $_SESSION["pword"]=$_GET['pword'];
 
 <body class="ad">
     <div>
-        <div class="">
+        <div class="lout">
         <form action="logout.php" method="POST">
             <button type="submit" name="logout">LOGOUT</button>
+        </div>
         </form>
             <center>
                     <div class="button1">
-                        <a href="user/u_index.php" class="btn">Personal DETAILS</a>
-                        <a href="show_offer.php" class="btn">Offers</a>
+                        <a href="user/u_index.php?uname=<?php echo $uname?>" class="btn">Personal DETAILS</a>
+                        <a href="cart3.php" class="btn">Offers</a>
                     </div>
             </center>
-        </div>
     </div>
     <footer class="footer">
               copyrights &copy; @LEHKO GYM 2019.

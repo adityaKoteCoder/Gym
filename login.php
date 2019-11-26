@@ -1,4 +1,5 @@
 <?php
+
     $email = $_GET["email"];
     $pword = $_GET["pword"];
     if($email == "lehko@gmail.com" && $pword == "success")
@@ -21,6 +22,9 @@ $pword=$_GET['pword'];
 $sql= "SELECT * from user_details where email='$email' and pword='$pword'";
 $result=mysqli_query($conn,$sql) or die(mysqli_error($conn));
 $cnt=mysqli_fetch_row($result);
+
+$uname = $cnt[1];
+//die($uname);
 
 // $uname = $cnt['uname'];
 // echo "<script>alert($uname);</script>"

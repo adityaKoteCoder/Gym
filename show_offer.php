@@ -26,11 +26,13 @@ $result = $conn->query($sql);
     <title>Admin</title>
 </head>
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/table.css">
+
 <body class="wrapper">
-<h1>Offer Details</h1>
+<h1><center>Offer Details</center></h1>
 <div>
     <div class="login_box">
-        <table class=boxer>
+        <table class="boxer">
             <tr>
                 <th>Name</th><th>Cost</th><th>Duration</th><th></th>
             </tr>
@@ -50,18 +52,14 @@ $result = $conn->query($sql);
                 }
             } 
             ?>
-
+            
             </table>
         </div>
     </div>
     <footer class="footer">
-        copyrights &copy; @LEHKO GYM 2019.
+       <p> copyrights &copy; @LEHKO GYM 2019.</p>
+        
     </footer>
 </body>
 </html>
-
-    
-</body>
-</html>
-
 

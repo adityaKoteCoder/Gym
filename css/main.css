@@ -101,3 +101,15 @@ ul li.active a
 	min-width: 950px;
 	background-attachment: fixed;
 }
+
+.lout
+{
+    margin-right: 2em;
+    /* position: fixed; */
+    top: 5%;
+    right:1%;
+    opacity: .9;
+    
+    /* transform: translate(-50%,-50%);  */
+}
+

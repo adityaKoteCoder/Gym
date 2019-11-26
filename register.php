@@ -28,7 +28,7 @@ $result=mysqli_query($conn,$sql)or die(mysqli_error($connection));
 $query="INSERT INTO user_details VALUES ('$name','$uname','$dob','$gen','$pno','$email','$pword')";
 
 mysqli_query($conn,$query)or die(mysqli_error($conn));
-    echo"alert:Success";
+    echo"<script>alert:Success;</script>";
 
 #}
 Mysqli_close($conn);
