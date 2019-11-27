@@ -28,12 +28,12 @@ $result = $conn->query($sql);
 </head>
 <link rel="stylesheet" href="css/style.css">
 <body class="wrapper">
-<h1><center>Contact Details</h1>
+<h1 style="color:white;"><center>Contact Details</h1>
 <div>
     <div class="login_box">
         <table class=boxer>
             <tr>
-                <th>Name</th><th>Phone No</th><th>email</th><th>Information</th>
+                <center><th>Name</th><th>email</th><th>Phone No</th><th>Information</th>
             </tr>
             <?php if ($result->num_rows > 0) {
                 // output data of each row
@@ -49,13 +49,14 @@ $result = $conn->query($sql);
                 }
             } 
             ?>
+            </center>
             </table>
         </div>
     </div>
 
     
 </body>
-<footer class="footer">
-        copyrights &copy; @LEHKO GYM 2019.
-    </footer>
+    <!-- <footer class="footer">
+    <center><h3>Copyrights &copy @LehkoGym</h3>
+        </footer> -->
 </html>

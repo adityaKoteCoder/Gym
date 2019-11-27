@@ -29,7 +29,7 @@ $result = $conn->query($sql);
 <link rel="stylesheet" href="css/table.css">
 
 <body class="wrapper">
-<h1><center>Offer Details</center></h1>
+<h1 style="color:white;"><center>Offer Details</center></h1>
 <div>
     <div class="login_box">
         <table class="boxer">
@@ -42,7 +42,7 @@ $result = $conn->query($sql);
             ?>
             <tr>
                     <td><?php echo $row["name"] ?></td>
-                    <td><?php echo $row["price"] ?></td>
+                    <td>$<?php echo $row["price"] ?></td>
                     <td><?php echo $row["dur"] ?></td>
                     <?php 
                         $img_name = "images/background/" . $row["img"] ?>
@@ -56,10 +56,10 @@ $result = $conn->query($sql);
             </table>
         </div>
     </div>
-    <footer class="footer">
+    <!-- <footer class="footer">
        <p> copyrights &copy; @LEHKO GYM 2019.</p>
         
-    </footer>
+    </footer> -->
 </body>
 </html>
 

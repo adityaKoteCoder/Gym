@@ -28,7 +28,7 @@ $result = $conn->query($sql);
 </head>
 <link rel="stylesheet" href="css/style.css">
 <body class="wrapper">
-<h1><center>Client Details</h1>
+<h1 style="color:white;"><center>Client Details</h1>
 <div>
     <div class="login_box">
         <table class=boxer>
@@ -57,7 +57,7 @@ $result = $conn->query($sql);
     </div>
     
 </body>
-<footer class="footer">
-        copyrights &copy; @LEHKO GYM 2019.
-</footer>
+<!-- <footer class="footer">
+<center><h3>Copyrights &copy @LehkoGym</h3>
+</footer> -->
 </html>

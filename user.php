@@ -26,10 +26,9 @@ $uname= $_SESSION['uname'];
 <link rel="stylesheet" href="css/main.css">
 
 <body class="ad">
-    <div>
-        <div class="lout">
+        <div>
         <form action="logout.php" method="POST">
-            <button type="submit" name="logout">LOGOUT</button>
+            <button class="lout lout1" type="submit" name="logout">LOGOUT</button>
         </div>
         </form>
             <center>
@@ -38,10 +37,9 @@ $uname= $_SESSION['uname'];
                         <a href="cart3.php" class="btn">Offers</a>
                     </div>
             </center>
-    </div>
-    <footer class="footer">
+    <!-- <footer class="footer">
               copyrights &copy; @LEHKO GYM 2019.
-     </footer>
+     </footer> -->
 
      
 </body>

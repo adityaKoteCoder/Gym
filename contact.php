@@ -28,7 +28,7 @@ $info=$_POST['info'];
 $query="INSERT INTO contact VALUES ('$name','$email','$pno','$info')";
 
 mysqli_query($conn,$query)or die(mysqli_error($conn));
-    echo"alert:Success";
+    echo"<script>alert('Success')</script>";
 
 #}
 Mysqli_close($conn);

@@ -93,6 +93,9 @@ $conn = mysqli_connect("$servername","$username","$password","$dbname");
         table th{
             background-color: #efefef;
         }
+        td{
+            color:white;
+        }
     </style>
 </head>
 <body class='ad'>

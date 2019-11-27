@@ -35,7 +35,7 @@ if($cnt == true)
     }
 else
     {   
-    echo  "<script type=\"text/javascript\">alert=Invalid Input;</script>";
+    echo  "<script>alert('Invalid Input');</script>";
     }
     
     ob_end_flush();
