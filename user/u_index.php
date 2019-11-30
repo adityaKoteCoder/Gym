@@ -1,3 +1,7 @@
+<?php
+include('uconfig.php');
+$uname = $_GET["uname"];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,6 +31,8 @@
 </head>
 <body class="ad">
     <div class="wrapper">
+    <button class="lout lout1" type="submit" name="logout"><a href="../user.php?uname=<?php echo $uname ?>" class="btn btn-default">Back</a>
+</button>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
@@ -35,9 +41,10 @@
                     </div>
                     <?php
                     // Include config file
-                    require_once "uconfig.php";
+                    // require_once "uconfig.php";
+                    
                     // Attempt select query execution
-                    $sql = "SELECT * FROM user_details";
+                    $sql = "SELECT * FROM user_details where uname = '$uname'    ";
                     if($result = mysqli_query($link, $sql)){
                         if(mysqli_num_rows($result) > 0){
                             echo "<table class='table table-bordered table-striped'>";
@@ -56,9 +63,11 @@
                                 echo "<tbody>";
                                 while($row = mysqli_fetch_array($result)){
                                     echo "<tr>";
+                                    $dob = date("d-m-Y", strtotime($row["dob"]));
+
                                         echo "<td>" . $row['name'] . "</td>";
                                         echo "<td>" . $row['uname'] . "</td>";
-                                        echo "<td>" . $row['dob'] . "</td>";
+                                        echo "<td>"  .$dob ."</td>";
                                         echo "<td>" . $row['gen'] . "</td>";
                                         echo "<td>" . $row['pno'] . "</td>";
                                         echo "<td>" . $row['email'] . "</td>";

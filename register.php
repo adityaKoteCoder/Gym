@@ -27,8 +27,9 @@ $result=mysqli_query($conn,$sql)or die(mysqli_error($connection));
 
 $query="INSERT INTO user_details VALUES ('$name','$uname','$dob','$gen','$pno','$email','$pword')";
 
-mysqli_query($conn,$query)or die(mysqli_error($conn));
-    echo"<script>alert:Success;</script>";
+mysqli_query($conn,$query)or die(mysqli_error($conn));  
+    echo  "<script>alert('Registration Successful');location.href='register.html'</script>";
+
 
 #}
 Mysqli_close($conn);

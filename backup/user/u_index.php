@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
@@ -18,10 +18,6 @@
         table tr td:last-child a{
             margin-right: 15px;
         }
-        td{
-
-            color:orange;
-        }
     </style>
     <script type="text/javascript">
         $(document).ready(function(){
@@ -35,24 +31,25 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="page-header clearfix">
-                        <h2 class="pull-left">Offer Details</h2>
-                        <a href="manage.html" class="btn btn-success pull-right">Add New Offer</a>
+                        <h2 class="pull-left">My Details</h2>
                     </div>
                     <?php
                     // Include config file
-                    require_once "config.php";
-                    
+                    require_once "uconfig.php";
                     // Attempt select query execution
-                    $sql = "SELECT * FROM offer";
+                    $sql = "SELECT * FROM user_details";
                     if($result = mysqli_query($link, $sql)){
                         if(mysqli_num_rows($result) > 0){
                             echo "<table class='table table-bordered table-striped'>";
                                 echo "<thead>";
                                     echo "<tr>";
-                                        echo "<th>Offer Name</th>";
-                                        echo "<th>Price</th>";
-                                        echo "<th>Duration</th>";
-                                        echo "<th>Image</th>";
+                                        echo "<th>Name</th>";
+                                        echo "<th>User Name</th>";
+                                        echo "<th>Date of Birth</th>";
+                                        echo "<th>Gender</th>";
+                                        echo "<th>Phone Number</th>";
+                                        echo "<th>Email</th>";
+                                        echo "<th>Password</th>";
                                         echo "<th>Action</th>";
                                     echo "</tr>";
                                 echo "</thead>";
@@ -60,13 +57,16 @@
                                 while($row = mysqli_fetch_array($result)){
                                     echo "<tr>";
                                         echo "<td>" . $row['name'] . "</td>";
-                                        echo "<td>" . $row['price'] . "</td>";
-                                        echo "<td>" . $row['dur'] . "</td>";
-                                        echo "<td>" . $row['img'] . "</td>";
+                                        echo "<td>" . $row['uname'] . "</td>";
+                                        echo "<td>" . $row['dob'] . "</td>";
+                                        echo "<td>" . $row['gen'] . "</td>";
+                                        echo "<td>" . $row['pno'] . "</td>";
+                                        echo "<td>" . $row['email'] . "</td>";
+                                        echo "<td>" . $row['pword'] . "</td>";
                                         echo "<td>";
-                                            echo "<a href='o_read.php?id=". $row['id'] ."' title='View Record' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>";
-                                            echo "<a href='o_update.php?id=". $row['id'] ."' title='Update Record' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>";
-                                            echo "<a href='o_delete.php?id=". $row['id'] ."' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
+                                            // echo "<a href='u_read.php?uname=". $row['uname'] ."' title='View Record' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>";
+                                            echo "<a href='u_update.php?uname=". $row['uname'] ."' title='Update Record' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>";
+                                            // echo "<a href='u_delete.php?uname=". $row['uname'] ."' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
                                         echo "</td>";
                                     echo "</tr>";
                                 }

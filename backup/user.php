@@ -1,13 +1,18 @@
 <?php
-// session_start();
-//session_start();
-//$_SESSION["name"]=$_GET["name"];
-$uname=$_GET['uname'];
-//$_SESSION["dob"]=$_GET['dob'];
-//$_SESSION["gen"]=$_GET['gen'];
-//$_SESSION["pno"]=$_GET['pno'];
-//$_SESSION['email']=$_GET['email'];
-//$_SESSION["pword"]=$_GET['pword'];
+session_start();
+// echo "<pre>";
+// print_r($_GET);
+// echo "</pre>";
+// die();
+$_SESSION["name"]=$_GET["name"];
+$_SESSION["uname"]=$_GET['uname'];
+$_SESSION["dob"]=$_GET['dob'];
+$_SESSION["gen"]=$_GET['gen'];
+$_SESSION["pno"]=$_GET['pno'];
+$_SESSION['email']=$_GET['email'];
+$_SESSION["pword"]=$_GET['pword'];
+$uname= $_SESSION['uname'];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
